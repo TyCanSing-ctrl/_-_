@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sfcjordon - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <audio id="bg-music" loop>
+        <source src="Tommy Richman - MILLION DOLLAR BABY (Official Visualizer).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const audio = document.getElementById("bg-music");
+    
+        // Try playing immediately (autoplay might be blocked)
+        const playAudio = () => {
+            audio.play().catch(error => {
+                console.log("Autoplay blocked. Waiting for user interaction...");
+            });
+        };
+    
+        playAudio();
+    
+        // If autoplay is blocked, wait for user interaction
+        document.addEventListener("click", () => {
+            audio.play();
+        }, { once: true }); // One-time listener
+    });
+    </script>
+    
+      
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const audio = document.getElementById('bg-music');
+          audio.volume = 0.5;
+          audio.play().catch(error => console.log("Auto-play blocked:", error));
+        });
+      </script>      
+
+    <div class="portfolio-card">
+        <div class="profile-image">
+            <img src="a_1dc2bd4d1e5c75a10e9fc7f5f936fb1c.gif" alt="Profile Image">
+        </div>
+        <div class="details">
+            <h1 class="fade-in">sfcjordon</h1>
+            <p class="fade-in">Developer At <a href="https://discord.gg/nd7eBxTNXm" target="_blank">Selp</a></p>
+            <p class="fade-in">C# | C++ | Reverse Engineer | Android Developer | Python | Lua</p>
+            
+            <div class="social-links">
+                <a href="https://discord.gg/nd7eBxTNXm" target="_blank">
+                    <img class="IconLogo fade-in" src="discord.webp" alt="Discord">
+                </a>
+                <a href="https://github.com/TyCanSing-ctrl" target="_blank">
+                    <img class="IconLogo fade-in" src="github-logo.png" alt="GitHub">
+                </a>
+                <a href="https://guns.lol/petrovich" target="_blank">
+                    <img class="IconLogo fade-in" src="gunslol.png" alt="Guns.lol">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <section class="skills fade-in">
+        <h2>Skills - Also Please click anywhere</h2>
+        <ul>
+            <li>C#</li>
+            <li>C++</li>
+            <li>Reverse Engineering</li>
+            <li>Android Development</li>
+            <li>Python</li>
+            <li>Lua</li>
+        </ul>
+    </section>
+
+    <section class="projects">
+        <h2 class="fade-in">Projects</h2>
+        <div class="project-card slide-in">
+            <img src="Ivan_s-Token-Gen-_1_.gif" alt="Project GIF">
+            <h3>Project 1</h3>
+            <p>My roblox offset dumper project.</p>
+        </div>
+        <div class="project-card slide-in">
+            <img src="github-logo.png" alt="Project Image">
+            <h3>Project 2</h3>
+            <p>My second project description.</p>
+        </div>
+    </section>
+
+</body>
+</html>
